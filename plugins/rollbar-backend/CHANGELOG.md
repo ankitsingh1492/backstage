@@ -1,5 +1,14 @@
 # @backstage/plugin-rollbar-backend
 
+## 0.1.18
+
+### Patch Changes
+
+- c5e175cde9: Replace the usage of `axios` with `node-fetch` in the Rollbar API
+- Updated dependencies
+  - @backstage/test-utils@0.2.1
+  - @backstage/backend-common@0.10.1
+
 ## 0.1.17
 
 ### Patch Changes

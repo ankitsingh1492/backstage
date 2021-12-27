@@ -1,5 +1,68 @@
 # @backstage/create-app
 
+## 0.4.10
+
+### Patch Changes
+
+- 79b342bd36: removed inline and internal CSS from index.html
+
+  To make this change to an existing app, apply the following changes to the `packages/app/public/index.html` file:
+
+  Remove internal style
+
+  ```diff
+  - <style>
+  -  #root {
+  -    min-height: 100%;
+  -  }
+  - </style>
+  ```
+
+  Remove inline style from the body tag
+
+  ```diff
+  - <body style="margin: 0">
+  + <body>
+  ```
+
+- 0dcd1dd64f: Add a `scheduler` to the plugin environment, which can schedule collaborative tasks across backends. To apply the same change in your backend, follow the steps below.
+
+  First install the package:
+
+  ```shell
+  # From the Backstage repository root
+  cd packages/backend
+  yarn add @backstage/backend-tasks
+  ```
+
+  Add the scheduler to your plugin environment type:
+
+  ```diff
+   // In packages/backend/src/types.ts
+  +import { PluginTaskScheduler } from '@backstage/backend-tasks';
+
+   export type PluginEnvironment = {
+  +  scheduler: PluginTaskScheduler;
+  ```
+
+  And finally make sure to add such an instance to each plugin's environment:
+
+  ```diff
+   // In packages/backend/src/index.ts
+  +import { TaskScheduler } from '@backstage/backend-tasks';
+
+   function makeCreateEnv(config: Config) {
+     // ...
+  +  const taskScheduler = TaskScheduler.fromConfig(config);
+
+     return (plugin: string): PluginEnvironment => {
+       // ...
+  +    const scheduler = taskScheduler.forPlugin(plugin);
+       return {
+  +      scheduler,
+         // ...
+  ```
+
 ## 0.4.9
 
 ### Patch Changes

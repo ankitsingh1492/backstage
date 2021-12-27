@@ -1,5 +1,14 @@
 # @backstage/backend-common
 
+## 0.10.1
+
+### Patch Changes
+
+- 94cdf5d1bd: In-memory cache clients instantiated from the same cache manager now share the same memory space.
+- 7d4b4e937c: Uptake changes to the GitHub Credentials Provider interface.
+- Updated dependencies
+  - @backstage/integration@0.7.0
+
 ## 0.10.0
 
 ### Minor Changes

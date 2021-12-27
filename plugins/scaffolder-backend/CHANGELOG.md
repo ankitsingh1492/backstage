@@ -1,5 +1,18 @@
 # @backstage/plugin-scaffolder-backend
 
+## 0.15.19
+
+### Patch Changes
+
+- 7d4b4e937c: Uptake changes to the GitHub Credentials Provider interface.
+- d078377f67: Support navigating back to pre-filled templates to update inputs of scaffolder tasks for resubmission
+- Updated dependencies
+  - @backstage/backend-common@0.10.1
+  - @backstage/plugin-catalog-backend@0.19.4
+  - @backstage/plugin-scaffolder-common@0.1.2
+  - @backstage/integration@0.7.0
+  - @backstage/plugin-scaffolder-backend-module-cookiecutter@0.1.7
+
 ## 0.15.18
 
 ### Patch Changes

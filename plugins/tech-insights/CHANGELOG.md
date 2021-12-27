@@ -1,5 +1,16 @@
 # @backstage/plugin-tech-insights
 
+## 0.2.0
+
+### Minor Changes
+
+- a86f5c1701: fixes api auth in tech-insights plugin
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-catalog-react@0.6.9
+
 ## 0.1.2
 
 ### Patch Changes

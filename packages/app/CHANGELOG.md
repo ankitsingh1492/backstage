@@ -1,5 +1,21 @@
 # example-app
 
+## 0.2.59
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-cost-insights@0.11.15
+  - @backstage/plugin-tech-insights@0.2.0
+  - @backstage/cli@0.10.4
+  - @backstage/plugin-catalog@0.7.6
+  - @backstage/plugin-scaffolder@0.11.16
+  - @backstage/plugin-catalog-react@0.6.9
+  - @backstage/plugin-techdocs@0.12.12
+  - @backstage/integration-react@0.1.17
+  - @backstage/plugin-catalog-import@0.7.7
+  - @backstage/plugin-github-actions@0.4.29
+
 ## 0.2.58
 
 ### Patch Changes
